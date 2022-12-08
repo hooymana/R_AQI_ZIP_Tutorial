@@ -164,13 +164,15 @@ sum(is.na(myzip$AQI))
 hist(myzip$sitedist)
 median(myzip$sitedist)
 mean(myzip$sitedist)
-ggplot(myzip,aes(y=AQI,x=medianincome))+
-  geom_point()+
-  geom_smooth(method = 'lm')+
-  ylab("Mean AQI of 2021")+
-  xlab("Median Income of Zip Code (Census)")
 
-summary(lm(AQI~scale(medianincome),myzip))
-sd(myzip$medianincome,na.rm = T)
-mean(myzip$medianincome,na.rm=T)
-(1/.6854)*23905.89 #For every $34878 in zip code median income AQI decrease by 1 point
+###Quick comparison between participant AQI and mean participant zip code median income
+# ggplot(myzip,aes(y=AQI,x=medianincome))+
+#   geom_point()+
+#   geom_smooth(method = 'lm')+
+#   ylab("Mean AQI of 2021")+
+#   xlab("Median Income of Zip Code (Census)")
+# 
+# summary(lm(AQI~scale(medianincome),myzip))
+# sd(myzip$medianincome,na.rm = T)
+# mean(myzip$medianincome,na.rm=T)
+# (1/.6854)*23905.89 #For every $34878 in zip code median income AQI decrease by 1 point
