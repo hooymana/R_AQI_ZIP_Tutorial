@@ -70,7 +70,7 @@ for (i in 1:53) {
 }
 
 #Algorithm to add 0 to zip codes with 4 digits
-for(i in 1:1397){
+for(i in 1:dim(myzip)[1]){
   if(nchar(myzip$zip5[i])<5){
     myzip$zip5[i]=paste("0",myzip$zip5[i],sep="")
   }
