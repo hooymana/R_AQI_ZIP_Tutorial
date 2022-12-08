@@ -88,6 +88,7 @@ for(i in 1:dim(myzip)[1]){
   myzip$COUNTY[i]=z$county
   myzip$lat[i]=z$lat
   #Get latitude from geocoder
+  #USING GEOCODER DOES COST MONEY!! First time users do get a $200 USD credit. Each call costs ~ half a cent.
   myzip$latg[i]=geocode(myzip$zip5[i])[2]
   myzip$lng[i]=z$lng
   #Get longitude from geocoder
