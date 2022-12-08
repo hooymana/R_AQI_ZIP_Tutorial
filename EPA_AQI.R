@@ -153,6 +153,13 @@ for(i in 1:dim(epa.agg)[1]){
   myzip$AQI[j]=epa.agg$DAILY_AQI_VALUE[ind]
   #store closest AQI site PM25
   myzip$PM25[j]=epa.agg$PM25[ind]
+  }else{
+  #Added in this else statement so that zip codes with missing lat/long are not given a value
+  myzip$sitedist[j]=NA
+  #Store closest AQI site AQI
+  myzip$AQI[j]=NA
+  #store closest AQI site PM25
+  myzip$PM25[j]=NA
   }
   #Track progress
   print(j)
